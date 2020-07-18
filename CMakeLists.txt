@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.0)
+project(avx-examples)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -mfma -msse -msse2 -msse3 -mavx -mavx2")
+add_executable(01-add-aligned ${CMAKE_SOURCE_DIR}/examples/01-add-aligned.cpp)
+add_executable(02-add-no-aligned ${CMAKE_SOURCE_DIR}/examples/02-add-no-aligned.cpp)
+add_executable(03-dot-product ${CMAKE_SOURCE_DIR}/examples/03-dot-product.cpp)
+add_executable(04-linear-search ${CMAKE_SOURCE_DIR}/examples/04-linear-search.cpp)
+add_executable(05-aligned-class ${CMAKE_SOURCE_DIR}/examples/05-aligned-class.cpp)
